@@ -25,8 +25,8 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 'leavingDate',
                 'encouteredPerson',
                 'reason',
-                'signature',
                 'company',
+                'signature',
             ],
             'attributesMetadata' => [
                 [
@@ -37,8 +37,34 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                     'leavingDate' => $o[5],
                     'encouteredPerson' => $o[6],
                     'reason' => $o[7],
-                    'signature' => $o[8],
-                    'company' => $o[9],
+                    'company' => $o[8],
+                    'signature' => $o[9],
+                ],
+            ],
+            'groups' => [
+                1 => [
+                    'visit',
+                ],
+                [
+                    'visit',
+                ],
+                [
+                    'visit',
+                ],
+                [
+                    'visit',
+                ],
+                [
+                    'visit',
+                ],
+                [
+                    'visit',
+                ],
+                [
+                    'visit',
+                ],
+                [
+                    'visit',
                 ],
             ],
         ],

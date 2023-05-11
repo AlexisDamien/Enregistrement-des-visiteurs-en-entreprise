@@ -5,9 +5,11 @@ import VisitsTableData from './VisitsTableData.jsx';
 
 export default function VisitTable(props) {
         return (
-            <div>
+            <table>
                 <VisitsTableHeader />
-                <VisitsTableData visitors={ props.visitors } />
-            </div>
+                {props.visitors?.filter(v =>v.leavingDate === undefined).map((visitor, index) => (
+                <VisitsTableData visitor={ visitor } />
+                ))}
+            </table>
         );
 }

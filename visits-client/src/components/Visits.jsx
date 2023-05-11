@@ -3,19 +3,21 @@ import VisitsTitle from './VisitsTitle';
 import VisitsTable from './VisitsTable';
 import axios from 'axios';
 import Navbar from './Navbar';
+import jwtDecode from 'jwt-decode';
 
 
 export default function Visits() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [visitors, setVisitors] = useState([]);
+    const [employees, setEmployees] = useState([]);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
         const config = {
             headers: { Authorization: `Bearer ${token}` }
         };
-        axios.get('http://127.0.0.1:8001/api/visits', config)
+        axios.get('http://127.0.0.1:8000/api/visits', config)
             .then((response) => {
                             setIsLoaded(true);
                             const visitors = response.data['hydra:member'];
@@ -29,15 +31,29 @@ export default function Visits() {
     }, [])
 
     if (error) {
-        return(<div>Error: { error.message }</div>);
+        return(
+            <><Navbar current="./visits" />
+            <div className='m-10'>
+                Error: { error.message }
+            </div>;
+        </>
+        );
     } else if (!isLoaded) {
-        return(<div>Loading...</div>);
+        return(
+            <>
+                <Navbar current="./visits" />
+                <div className='m-10'>Loading...</div>
+            </>
+        );
     } else {
         return (
-            <div className="m-10">
-                <VisitsTitle visitorsCount={ visitors.length } />
-                <VisitsTable visitors={ visitors } />
-            </div>
+            <>
+                <Navbar current="./visits" />
+                <div className="m-10">
+                    <VisitsTitle visitorsCount={visitors.filter((v)=>v.leavingDate===undefined).length} />
+                    <VisitsTable visitors={visitors} />
+                </div>
+            </>
         );
     }
 }

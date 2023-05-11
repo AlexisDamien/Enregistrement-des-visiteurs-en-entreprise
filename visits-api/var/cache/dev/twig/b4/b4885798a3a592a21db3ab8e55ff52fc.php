@@ -67,6 +67,6 @@ class __TwigTemplate_607f727c4db9a892670324e1942604c3 extends Template
     <path d=\"M4 6v6a8 3 0 0 0 16 0v-6\"></path>
     <path d=\"M4 12v6a8 3 0 0 0 16 0v-6\"></path>
 </svg>
-", "@Doctrine/Collector/database.svg", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\database.svg");
+", "@Doctrine/Collector/database.svg", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\database.svg");
     }
 }

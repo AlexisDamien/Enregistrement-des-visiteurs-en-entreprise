@@ -125,7 +125,7 @@ export default function Employees() {
       headers: { Authorization: `Bearer ${token}` },
     };
     axios
-      .post("http://127.0.0.1:8000/api/employees", newEmployee)
+      .post("http://127.0.0.1:8000/api/employees", newEmployee, config)
       .then((response) => {
         console.log(response);
         window.location.reload();

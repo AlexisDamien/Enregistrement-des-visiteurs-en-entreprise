@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerPGixeYE\App_KernelDevDebugContainer([
     'container.build_hash' => 'PGixeYE',
-    'container.build_id' => '874eb9fe',
-    'container.build_time' => 1683238060,
+    'container.build_id' => '93b7e4fb',
+    'container.build_time' => 1683718101,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerPGixeYE');

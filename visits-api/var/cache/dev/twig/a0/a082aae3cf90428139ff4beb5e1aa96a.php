@@ -165,6 +165,6 @@ class __TwigTemplate_e99e900846cb58bfe2b2a41293ce1d02 extends Template
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
     }
 }

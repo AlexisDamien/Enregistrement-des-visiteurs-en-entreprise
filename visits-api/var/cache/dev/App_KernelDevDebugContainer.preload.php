@@ -536,3 +536,20 @@ $classes[] = 'Symfony\Component\Validator\Constraints\WhenValidator';
 $classes[] = 'Symfony\Component\WebLink\EventListener\AddLinkHeaderListener';
 
 $preloaded = Preloader::preload($classes);
+require_once __DIR__.'/twig/5d/5d8ed856590b8f7cd93e634882fbd86d.php';
+require_once __DIR__.'/twig/f2/f280a3d453309374995392f22ef24c86.php';
+require_once __DIR__.'/twig/b4/b4885798a3a592a21db3ab8e55ff52fc.php';
+require_once __DIR__.'/twig/a0/a082aae3cf90428139ff4beb5e1aa96a.php';
+require_once __DIR__.'/twig/c1/c17ce074db6db0db7788284b944e1e5b.php';
+require_once __DIR__.'/twig/d5/d5a2cd2d80ef45b4725fb1a3ec027871.php';
+require_once __DIR__.'/twig/d7/d7c80694507e89c688df7f1eae571098.php';
+require_once __DIR__.'/twig/82/821b5ff46052deb21688548836542c59.php';
+require_once __DIR__.'/twig/5d/5d181827268bf7435cbad2fff6382946.php';
+require_once __DIR__.'/twig/8e/8e4bc0da6d450f42b63dc793e0cd12ef.php';
+require_once __DIR__.'/twig/1c/1ce599688246d16cca449ef72ecd2f0e.php';
+require_once __DIR__.'/twig/7e/7e27d9dc07a6ca86eb4077a6fdf20fb7.php';
+
+$classes = [];
+$classes[] = 'Symfony\\Component\\Routing\\Generator\\CompiledUrlGenerator';
+$classes[] = 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableCompiledUrlMatcher';
+$preloaded = Preloader::preload($classes, $preloaded);

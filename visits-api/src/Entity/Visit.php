@@ -2,42 +2,51 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiProperty;
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\VisitRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use ApiPlatform\Metadata\ApiResource; 
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: VisitRepository::class)]
-#[ApiResource()]
+#[ApiResource(normalizationContext: ['groups'=>['visit']])]
 class Visit
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups('visit')]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups('visit')]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups('visit')]
     private ?string $lastname = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[Groups('visit')]
     private ?\DateTimeInterface $entranceDate = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    #[Groups('visit')]
     private ?\DateTimeInterface $leavingDate = null;
 
     #[ORM\ManyToOne(inversedBy: 'visits')]
+    #[Groups('visit')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?Employee $encouteredPerson = null;
 
     #[ORM\ManyToOne(inversedBy: 'visits')]
+    #[Groups('visit')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?Reason $reason = null;
 
-    #[ORM\Column(type: Types::BLOB)]
-    private $signature = null;
-
     #[ORM\Column(length: 255)]
+    #[Groups('visit')]
     private ?string $company = null;
 
     public function getId(): ?int

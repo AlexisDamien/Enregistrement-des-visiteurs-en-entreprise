@@ -475,6 +475,6 @@ class __TwigTemplate_ee158d4ae5af3e21ba2302e5cb264594 extends Template
 
 </body>
 </html>
-", "@ApiPlatform/SwaggerUi/index.html.twig", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\api-platform\\core\\src\\Symfony\\Bundle\\Resources\\views\\SwaggerUi\\index.html.twig");
+", "@ApiPlatform/SwaggerUi/index.html.twig", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\api-platform\\core\\src\\Symfony\\Bundle\\Resources\\views\\SwaggerUi\\index.html.twig");
     }
 }

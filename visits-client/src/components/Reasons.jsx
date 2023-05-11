@@ -3,7 +3,6 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import jwtDecode from "jwt-decode";
 
-
 export default function Employees() {
   const token = localStorage.getItem("token");
   if (!token) {
@@ -13,9 +12,14 @@ export default function Employees() {
     window.location.href = "/visits";
   }
 
+
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [newReasons, setNewReasons] = useState({
+    reasonName:"",
+  });
   const [reasons, setReasons] = useState([]);
+
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -80,8 +84,11 @@ export default function Employees() {
               type="text"
               name="reasonName"
               id="reasonName"
+              value={reasons.reasonName}
+              placeholder="Ecrire un motif"
               autoComplete="motif"
               className="ml-5 w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              onChange={handleChange}
             />
           </div>
           <button
@@ -95,8 +102,25 @@ export default function Employees() {
       </>
     );
   }
-  function handleSubmit(event) {
+  function  handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target);
+  
+    console.log(reasons);
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
+    axios.post("http://127.0.0.1:8000/api/reasons", newReasons, config)
+      .then((response) => {
+        console.log(response);
+        window.location.reload();
+      })
+  }
+  function handleChange(event) {
+    event.persist();
+    setNewReasons((newReasons) => ({
+      ...newReasons,
+      [event.target.name]: event.target.value,
+    }));
   }
 }

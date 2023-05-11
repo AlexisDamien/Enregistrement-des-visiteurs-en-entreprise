@@ -65,6 +65,6 @@ class __TwigTemplate_f104072820048f25f15eb55d47672ca7 extends Template
     <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>
     <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>
 </svg>
-", "@Security/Collector/icon.svg", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\icon.svg");
+", "@Security/Collector/icon.svg", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }

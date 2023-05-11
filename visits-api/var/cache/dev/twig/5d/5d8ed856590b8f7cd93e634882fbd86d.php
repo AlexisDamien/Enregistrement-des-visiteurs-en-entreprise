@@ -164,6 +164,6 @@ class __TwigTemplate_7f61c5c62b1fab41641d154ef19011c8 extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Etudiant\\Enregistrement-des-visiteurs-en-entreprise\\Enregistrement-des-visiteurs-en-entreprise\\visits-api\\templates\\base.html.twig");
     }
 }

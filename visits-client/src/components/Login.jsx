@@ -106,7 +106,7 @@ export default function Login() {
     e.preventDefault();
     console.log(credentials);
     axios
-      .post("http://127.0.0.1:8001/api/auth", credentials)
+      .post("http://127.0.0.1:8000/api/auth", credentials)
       .then((response) => {
         console.log(response);
         localStorage.setItem("token", response.data.token);
