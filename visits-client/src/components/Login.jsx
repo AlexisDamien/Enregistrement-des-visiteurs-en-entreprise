@@ -8,8 +8,8 @@ export default function Login() {
   let navigate = useNavigate();
 
   const [credentials, setCredentials] = useState({
-    username: "toto@toto.com",
-    password: "azerty",
+    username: "",
+    password: "",
   });
 
   return (

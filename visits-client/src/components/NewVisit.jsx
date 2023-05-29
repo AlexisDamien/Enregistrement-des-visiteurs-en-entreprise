@@ -83,7 +83,7 @@ export default function NewVisits() {
     <>
       <Navbar current="newvisit" />
       <form className="max-w-6xl mx-auto px-6 py-12">
-        <div className="bg-w<hite shadow rounded-lg p-10">
+        <div className="bg-white shadow rounded-lg p-10">
           <h1 className="text-3xl font-bold pb-6">
             Saisie d'une nouvelle visite
           </h1>

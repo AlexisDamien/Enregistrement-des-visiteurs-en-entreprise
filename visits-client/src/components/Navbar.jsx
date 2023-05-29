@@ -12,6 +12,8 @@ const navigation = [
   { name: "Nouvelle visite", href: "newvisit", open: true },
   { name: "Employés", href: "employees", open: false },
   { name: "Motifs de visite", href: "reasons", open: false },
+  { name: "Utilisateurs", href: "Users", open: false},
+  { name: "Changer mot de passse", href: "newPassword", open: true},
 ];
 
 function classNames(...classes) {
